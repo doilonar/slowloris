@@ -7,4 +7,4 @@ with this you can do slowloris attack on any ports you wants.
 
 
 # Compile
-! gcc slow.c -lphtread
+gcc slow.c -lphtread
