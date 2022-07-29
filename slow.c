@@ -1,17 +1,14 @@
 #include <stdio.h>
-#include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
-#include <string.h>
 #include <pthread.h>
-#include<time.h>
 char ip[20];
 int threads;
 int port;
    
 void attack()
 {
-int sock=0;
+register int sock=0;
 int valread;
 struct sockaddr_in serv_addr;
 while(1){
