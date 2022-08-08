@@ -37,6 +37,6 @@ size_t i;
 pthread_t t[threads];
    for(i=0;i<threads;i++)
 	pthread_create(&t[i],NULL,(void *)attack,NULL);
-pthread_join(t[i-1],NULL);
+pthread_join(t[0],NULL);
 return 0;
 }
