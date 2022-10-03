@@ -25,7 +25,8 @@ while(1){
 	}
 }
 int main()
-{printf("ip:");
+{
+printf("ip:");
 scanf("%s",ip);
 printf("port:");
 scanf("%d",&port);
