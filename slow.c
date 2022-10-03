@@ -21,7 +21,7 @@ while(1){
 		break;
 	connect(sock,(struct sockaddr *)&serv_addr,sizeof(serv_addr));
 	send(sock, req, 6,0);
-	sleep(10); //wait 10 s
+	
 	}
 }
 int main()
