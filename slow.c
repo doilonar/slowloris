@@ -6,10 +6,10 @@
 char ip[20];
 int threads;
 int port;
-char *req="GET \r\n";
+
 void attack()
 {
-register int sock=0;
+int sock=0;
 int valread;
 struct sockaddr_in serv_addr;
 while(1){
