@@ -20,7 +20,7 @@ while(1){
 	if(inet_pton(AF_INET,ip,&serv_addr.sin_addr)<=0)
 		break;
 	connect(sock,(struct sockaddr *)&serv_addr,sizeof(serv_addr));
-	send(sock, req, 6);
+	send(sock, req, 6,0);
 	sleep(10); //wait 10 s
 	}
 }
