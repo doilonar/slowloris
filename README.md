@@ -2,7 +2,7 @@
 Socket attack in C.
 
 
-With this you can create as many sockets on any ports you wants.
+With this you can create as many sockets on any ports you want.
 
 
 # Compile
