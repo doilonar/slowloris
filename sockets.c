@@ -12,17 +12,16 @@ void attack()
 int sock=0;
 int valread;
 struct sockaddr_in serv_addr;
-while(1){
-	if((sock=socket(AF_INET,SOCK_STREAM,0))<0)
-		break;
-	serv_addr.sin_family = AF_INET;
-	serv_addr.sin_port=htons(port);
-	if(inet_pton(AF_INET,ip,&serv_addr.sin_addr)<=0)
-		break;
-	connect(sock,(struct sockaddr *)&serv_addr,sizeof(serv_addr));
+if((sock=socket(AF_INET,SOCK_STREAM,0))<0)
+	return NULL;
+serv_addr.sin_family = AF_INET;
+serv_addr.sin_port=htons(port);
+if(inet_pton(AF_INET,ip,&serv_addr.sin_addr)<=0)
+	return NULL;
+connect(sock,(struct sockaddr *)&serv_addr,sizeof(serv_addr));
+
+while(1);
 	
-	
-	}
 }
 int main()
 {
