@@ -29,11 +29,11 @@ int sec;
 printf("ip:");
 scanf("%20s",ip);
 printf("port:");
-scanf("%20d",&port);
+scanf("%d",&port);
 printf("threads:");
-scanf("%20d",&threads);
+scanf("%d",&threads);
 printf("time of program(sec):");
-scanf("%20d",&sec);
+scanf("%d",&sec);
 puts("attack...");
 
 size_t i;
