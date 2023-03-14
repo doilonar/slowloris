@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <pthread.h>
 
-char ip[20];
+char ip[13];
 int threads;
 int port;
 
@@ -27,7 +27,7 @@ int main()
 {
 int sec;
 printf("ip:");
-scanf("%20s",ip);
+scanf("%13s",ip);
 printf("port:");
 scanf("%d",&port);
 printf("threads:");
